@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	
+	<title>converter</title>
+	<style>
+		:-ms-input-placeholder{
+			color:white;
+		}
+	</style>
+</head>
+<body style="padding-top: 70px;padding-left:450px">
+
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-md-7">
+				<div class="page-header">
+				<h1 class="display-2 text-center bg-info">converter</h1></div>
+				<form >
+				<div class="form-group" style="margin-top:-8px">
+					<div class="input-group">
+    					<div class="input-group-prepend">
+      						<span class="input-group-text text-white bg-secondary" style="width: 100px;"><b>RUPEE</b></span>
+    					</div>
+    					<input type="number" class="form-control bg-danger text-white" placeholder="enter amount in rupees" id="RupeeIn" oninput="add_number()" style="height:75px;">
+  					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+    					<div class="input-group-prepend">
+      						<span class="input-group-text text-white bg-secondary" style="width: 100px"><b>DOLLAR</b></span>
+    					</div>
+    					<input type="text" class="form-control bg-primary text-white"  id="dolleroutput" style="height:75px">
+  					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+    					<div class="input-group-prepend">
+      						<span class="input-group-text text-white bg-secondary" style="width: 100px"><b>EURO</b></span>
+    					</div>
+    					<input type="text" class="form-control bg-success text-white"  id="eurooutput" style="height:75px">
+  					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+    					<div class="input-group-prepend">
+      						<span class="input-group-text bg-secondary text-white" style="width: 100px"><b>YEN</b></span>
+    					</div>
+    					<input type="text" class="form-control text-white bg-warning"  id="yenoutput" style="height:75px">
+  					</div>
+				</div>
+            
+				</div>
+
+			</form>
+
+				
+
+		</div>	
+		</div>
+	</div>
+	<script type="text/javascript">
+		function add_number() {
+                   
+  var first_number = parseInt(document.getElementById("RupeeIn").value);
+  
+  var result = first_number*0.015152;
+  var result1 = first_number*0.012;
+  var result2 = first_number*1.42;
+
+
+
+  document.getElementById("dolleroutput").value = result;
+  document.getElementById("eurooutput").value = result1;
+  document.getElementById("yenoutput").value = result2;
+
+  
+}
+
+	
+	</script>
+	
+</body>
+</html>
